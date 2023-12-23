@@ -24,13 +24,14 @@
         E = t.n(d);
       t(41), t(44), t(56);
       E.a.initializeApp({
-        apiKey: "AIzaSyDmrWL8Py4H46UbQG1PB-ClLjnae50STis",
-        authDomain: "archivos-proferonald.firebaseapp.com",
-        databaseURL: "https://archivos-proferonald-default-rtdb.firebaseio.com/",
-        projectId: "archivos-proferonald",
-        storageBucket: "archivos-proferonald.appspot.co",
-        messagingSenderId: "175302228423",
-        appId: "1:175302228423:web:23755472ce95af632cc1e2"
+        apiKey: "AIzaSyCBmK4AbGuze_pH7r5dZpMCEIgpUGKwSYM",
+        authDomain: "proferonald.com",
+        databaseURL: "https://proferonald-fb-default-rtdb.firebaseio.com",
+        projectId: "proferonald-fb",
+        storageBucket: "proferonald-fb.appspot.com",
+        messagingSenderId: "647906089395",
+        appId: "1:647906089395:web:72421f937bbf9f6a3693c6",
+        measurementId: "G-JYVC11X4W4",
       });
       E.a.database();
       var h = E.a.storage(),
