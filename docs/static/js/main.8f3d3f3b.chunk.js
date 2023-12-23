@@ -40,6 +40,14 @@
 
           rt.innerHTML = '';
 
+          const sl = document.getElementById('salir');
+
+          sl.addEventListener("click", function() {
+            
+            E.a.auth().signOut().then(() => {});
+        
+          });
+
       E.a.database();
       var h = E.a.storage(),
         v = (new E.a.auth.GoogleAuthProvider(), t(3)),
@@ -415,7 +423,7 @@
             { className: " file-explorer" },
             r.a.createElement(k, {
               showFileExplorer: a,
-              title: "Firebase File Manager by Doruk Karaboncuk",
+              title: "Archivos del ProfeRonald <span id='salir'></span>",
             }),
             r.a.createElement(j, { history: t }),
             r.a.createElement(x, null),
