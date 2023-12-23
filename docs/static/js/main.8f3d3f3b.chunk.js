@@ -32,6 +32,14 @@
         messagingSenderId: "175302228423",
         appId: "1:175302228423:web:23755472ce95af632cc1e2"
       });
+
+      E.a.auth().onAuthStateChanged(function (user) {
+        if (user) {
+
+          const rt = document.getElementById('root');
+
+          rt.innerHTML = '';
+
       E.a.database();
       var h = E.a.storage(),
         v = (new E.a.auth.GoogleAuthProvider(), t(3)),
@@ -840,7 +848,7 @@
                 r.a.createElement(
                   "span",
                   { className: "date-time-container--date" },
-                  w()().format("DD.MM.YYYY")
+                  w()().format("DD/MM/YYYY")
                 )
               ),
               r.a.createElement(
@@ -908,6 +916,48 @@
           navigator.serviceWorker.ready.then(function (e) {
             e.unregister();
           });
+
+        }else{
+
+          function IniciarSesion() {
+            
+            var provider = new E.a.auth.GoogleAuthProvider();
+            
+            E.a.auth()
+              .setPersistence(E.a.auth.Auth.Persistence.LOCAL)
+              .then(function () {
+                return E.a.auth()
+                  .signInWithRedirect(provider)
+                  .then(() => {})
+                  .catch((err) => {
+                    $("#login-app").html(
+                      '<h1>&iexcl;Ha ocurrido un error!, Intentando de nuevo...</h1>'
+                    );
+                    setTimeout(function () {
+                      const la = document.getElementById('login-app');
+                      la.innerHTML = '<div><img src="google.jpg" /></div><div class="login-app"><h1>Entrar con Gooogle</h1></div>';
+                      IniciarSesion();
+                    }, 2000);
+                  });
+              });
+          }
+
+          const rt = document.getElementById('root');
+
+          rt.innerHTML = '<div id="login-app"><div><img src="google.jpg" /></div><div class="login-app"><h1>Entrar con Gooogle</h1></div></div>';
+
+          const la = document.getElementById('login-app');
+
+          la.addEventListener("click", function() {
+            
+                IniciarSesion();
+            
+          });
+
+
+        }
+
+      })
     },
   },
   [[33, 1, 2]],
