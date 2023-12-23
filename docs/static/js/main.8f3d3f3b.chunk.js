@@ -26,8 +26,9 @@
       E.a.initializeApp({
         apiKey: "AIzaSyDmrWL8Py4H46UbQG1PB-ClLjnae50STis",
         authDomain: "archivos-proferonald.firebaseapp.com",
+        databaseURL: "https://archivos-proferonald-default-rtdb.firebaseio.com/",
         projectId: "archivos-proferonald",
-        storageBucket: "archivos-proferonald.appspot.com",
+        storageBucket: "archivos-proferonald.appspot.co",
         messagingSenderId: "175302228423",
         appId: "1:175302228423:web:23755472ce95af632cc1e2"
       });
