@@ -36,8 +36,8 @@
       });
 
 
-        E.a.auth().onAuthStateChanged(function (user) {
-    if (user && user.uid == '2332r2') {
+ //       E.a.auth().onAuthStateChanged(function (user) {
+  //  if (user && user.uid == '2332r2') {
 
       E.a.database();
       var h = E.a.storage(),
@@ -916,7 +916,7 @@
             e.unregister();
           });
 
-        }else{
+      /*  }else{
 
           function IniciarSesion() {
           
@@ -953,7 +953,7 @@
 
       
          
-        }
+        }*/
         
       })
 
