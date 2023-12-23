@@ -40,13 +40,6 @@
 
           rt.innerHTML = '';
 
-          const sl = document.getElementById('salir');
-
-          sl.addEventListener("click", function() {
-            
-            E.a.auth().signOut().then(() => {});
-        
-          });
 
       E.a.database();
       var h = E.a.storage(),
@@ -251,6 +244,11 @@
                 "span",
                 { className: "header-icon", "data-title": t },
                 r.a.createElement(v.a, { icon: b.e, color: "gold" })
+              ),
+              r.a.createElement(
+                "span",
+                { className: "salir-login", "id": "salir"},
+                r.a.createElement(v.a, { icon: b.l, color: "gold" })
               )
             ),
             r.a.createElement(
@@ -423,7 +421,8 @@
             { className: " file-explorer" },
             r.a.createElement(k, {
               showFileExplorer: a,
-              title: "Archivos del ProfeRonald <span id='salir'></span>",
+              title: "Archivos del ProfeRonald",
+              id: "salir"
             }),
             r.a.createElement(j, { history: t }),
             r.a.createElement(x, null),
@@ -924,6 +923,16 @@
           navigator.serviceWorker.ready.then(function (e) {
             e.unregister();
           });
+
+
+          const sl = document.getElementById('salir');
+
+          sl.addEventListener("click", function() {
+            
+            E.a.auth().signOut().then(() => {});
+        
+          });
+
 
         }else{
 
