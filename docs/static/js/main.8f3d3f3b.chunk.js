@@ -1,5 +1,3 @@
-
-
 (this["webpackJsonpreact-file-manager-with-google-cloud"] =
   this["webpackJsonpreact-file-manager-with-google-cloud"] || []).push([
   [0],
@@ -25,7 +23,6 @@
         d = t(16),
         E = t.n(d);
       t(41), t(44), t(56);
-
       E.a.initializeApp({
         apiKey: "AIzaSyDmrWL8Py4H46UbQG1PB-ClLjnae50STis",
         authDomain: "archivos-proferonald.firebaseapp.com",
@@ -34,11 +31,6 @@
         messagingSenderId: "175302228423",
         appId: "1:175302228423:web:23755472ce95af632cc1e2"
       });
-
-
- //       E.a.auth().onAuthStateChanged(function (user) {
-  //  if (user && user.uid == '2332r2') {
-
       E.a.database();
       var h = E.a.storage(),
         v = (new E.a.auth.GoogleAuthProvider(), t(3)),
@@ -915,53 +907,8 @@
           navigator.serviceWorker.ready.then(function (e) {
             e.unregister();
           });
-
-      /*  }else{
-
-          function IniciarSesion() {
-          
-           var provider = new E.a.auth.GoogleAuthProvider();
-        
-           E.a.auth()
-              .setPersistence(E.a.auth.Auth.Persistence.LOCAL)
-              .then(function () {
-                return firebase
-                  .auth()
-                  .signInWithRedirect(provider)
-                  .then(() => {})
-                  .catch((err) => {
-                    setTimeout(function () {
-                      const la = document.getElementsByClassName("login-app");
-                      la.innerHTML = '<span class="aviso">&iexcl;Ha ocurrido un error!, Intente de nuevo.</span>';
-                    }, 500);
-                  });
-              });
-          }
-      
-         const rt = document.getElementById("root");
-      
-         rt.innerHTML = '<div id="login-app"><div><img src="google.jpg" alt="Login App"></div><div class="login-app"><br /><h1>Entrar con Google</h1></div></div>';
-
-         const la = document.getElementById("login-app");
-
-         la.addEventListener("click", function (event) {
-          var clickedElement = event.target;
-              clickedElement.textContent = '';
-              IniciarSesion();
-          
-      });
-
-      
-         
-        }
-        
-      })*/
-
     },
-
   },
   [[33, 1, 2]],
 ]);
 //# sourceMappingURL=main.8f3d3f3b.chunk.js.map
-
- 
